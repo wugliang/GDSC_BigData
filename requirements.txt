@@ -2,14 +2,8 @@ streamlit
 pandas
 numpy
 plotly
-plotly.express
-plotly.graph_objects
-plotly.subplots
-sklearn.preprocessing
+sklearn
 wordcloud
 PIL
 matplotlib
-matplotlib.font_manager
-matplotlib.patches 
-matplotlib.pyplot
 time
