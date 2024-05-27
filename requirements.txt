@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 plotly
-sklearn
+scikit-learn
 wordcloud
 PIL
 matplotlib
