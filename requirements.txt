@@ -4,6 +4,6 @@ numpy
 plotly
 scikit-learn
 wordcloud
-PIL
+Pillow
 matplotlib
 time
