@@ -66,6 +66,14 @@ def draw_wordcloud(dataset, feature, type):
     plt.rcParams['font.family'] = 'Microsoft JhengHei'
     ax_presidential.set_title("選擇總統最重要的因素", fontsize=40, color='white', fontweight='bold')
 
+    wordcloud_presidential = WordCloud(width=1280, height=720, background_color='white',
+                                       font_path="msjhbd.ttc").generate(text_presidential)
+    fig_presidential, ax_presidential = plt.subplots(figsize=(10, 5))
+    ax_presidential.imshow(wordcloud_presidential, interpolation='bilinear')
+    ax_presidential.axis('off')
+    fig_presidential.patch.set_facecolor('#4286F3')
+    plt.rcParams['font.family'] = 'Microsoft JhengHei'
+    ax_presidential.set_title("選擇總統最重要的因素", fontsize=40, color='white', fontweight='bold')
     # Word cloud for party vote
     wordcloud_party_vote = WordCloud(width=1280, height=720, background_color='white',
                                      font_path="msjhbd.ttc").generate(text_party_vote)

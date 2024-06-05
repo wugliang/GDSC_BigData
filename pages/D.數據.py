@@ -4,4 +4,4 @@ dataset = pd.read_csv('datas.csv')
 
 dataset['us_relation_opinion'] = 1+(dataset['us_relation_opinion']-1)*1.5
 
-st.write(dataset)
+st.write(dataset.drop(dataset.columns[0], axis=1))
