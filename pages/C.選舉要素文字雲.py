@@ -57,6 +57,7 @@ def draw_wordcloud(dataset, feature, type):
     text_regional_legislator = ' '.join(split_regional_legislator)
 
     # Word cloud for presidential candidates
+    st.subheader('選擇總統最重要的因素')
     wordcloud_presidential = WordCloud(width=1280, height=720, background_color='white',
                                        font_path="msjhbd.ttc").generate(text_presidential)
     fig_presidential, ax_presidential = plt.subplots(figsize=(10, 5))
@@ -64,17 +65,10 @@ def draw_wordcloud(dataset, feature, type):
     ax_presidential.axis('off')
     fig_presidential.patch.set_facecolor('#4286F3')
     plt.rcParams['font.family'] = 'Microsoft JhengHei'
-    ax_presidential.set_title("選擇總統最重要的因素", fontsize=40, color='white', fontweight='bold')
+    #ax_presidential.set_title("選擇總統最重要的因素", fontsize=40, color='white', fontweight='bold')
 
-    wordcloud_presidential = WordCloud(width=1280, height=720, background_color='white',
-                                       font_path="msjhbd.ttc").generate(text_presidential)
-    fig_presidential, ax_presidential = plt.subplots(figsize=(10, 5))
-    ax_presidential.imshow(wordcloud_presidential, interpolation='bilinear')
-    ax_presidential.axis('off')
-    fig_presidential.patch.set_facecolor('#4286F3')
-    plt.rcParams['font.family'] = 'Microsoft JhengHei'
-    ax_presidential.set_title("選擇總統最重要的因素", fontsize=40, color='white', fontweight='bold')
     # Word cloud for party vote
+    st.subheader('選擇政黨最重要的因素')
     wordcloud_party_vote = WordCloud(width=1280, height=720, background_color='white',
                                      font_path="msjhbd.ttc").generate(text_party_vote)
     fig_party_vote, ax_party_vote = plt.subplots(figsize=(10, 5))
@@ -82,9 +76,10 @@ def draw_wordcloud(dataset, feature, type):
     ax_party_vote.axis('off')
     fig_party_vote.patch.set_facecolor('#EB4537')
     plt.rcParams['font.family'] = 'Microsoft JhengHei'
-    ax_party_vote.set_title("選擇政黨最重要的因素", fontsize=40, color='white', fontweight='bold')
+    #ax_party_vote.set_title("選擇政黨最重要的因素", fontsize=40, color='white', fontweight='bold')
 
     # Word cloud for regional legislator
+    st.subheader('選擇區域立委最重要的因素')
     wordcloud_regional_legislator = WordCloud(width=1280, height=720, background_color='white',
                                                font_path="msjhbd.ttc").generate(text_regional_legislator)
     fig_regional_legislator, ax_regional_legislator = plt.subplots(figsize=(10, 5))
@@ -92,7 +87,7 @@ def draw_wordcloud(dataset, feature, type):
     ax_regional_legislator.axis('off')
     fig_regional_legislator.patch.set_facecolor('#FAC230')
     plt.rcParams['font.family'] = 'Microsoft JhengHei'
-    ax_regional_legislator.set_title("選擇區域立委最重要的因素", fontsize=40, color='white', fontweight='bold')
+    #ax_regional_legislator.set_title("選擇區域立委最重要的因素", fontsize=40, color='white', fontweight='bold')
 
     # Displaying the plots using Streamlit
     bar = st.progress(0)
