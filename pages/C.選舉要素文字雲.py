@@ -57,7 +57,6 @@ def draw_wordcloud(dataset, feature, type):
     text_regional_legislator = ' '.join(split_regional_legislator)
 
     # Word cloud for presidential candidates
-    st.subheader('選擇總統最重要的因素')
     wordcloud_presidential = WordCloud(width=1280, height=720, background_color='white',
                                        font_path="msjhbd.ttc").generate(text_presidential)
     fig_presidential, ax_presidential = plt.subplots(figsize=(10, 5))
@@ -68,7 +67,6 @@ def draw_wordcloud(dataset, feature, type):
     #ax_presidential.set_title("選擇總統最重要的因素", fontsize=40, color='white', fontweight='bold')
 
     # Word cloud for party vote
-    st.subheader('選擇政黨最重要的因素')
     wordcloud_party_vote = WordCloud(width=1280, height=720, background_color='white',
                                      font_path="msjhbd.ttc").generate(text_party_vote)
     fig_party_vote, ax_party_vote = plt.subplots(figsize=(10, 5))
@@ -79,7 +77,6 @@ def draw_wordcloud(dataset, feature, type):
     #ax_party_vote.set_title("選擇政黨最重要的因素", fontsize=40, color='white', fontweight='bold')
 
     # Word cloud for regional legislator
-    st.subheader('選擇區域立委最重要的因素')
     wordcloud_regional_legislator = WordCloud(width=1280, height=720, background_color='white',
                                                font_path="msjhbd.ttc").generate(text_regional_legislator)
     fig_regional_legislator, ax_regional_legislator = plt.subplots(figsize=(10, 5))
@@ -95,8 +92,11 @@ def draw_wordcloud(dataset, feature, type):
         bar.progress(i + 1, f'Producing plots... {i + 1}%')
         time.sleep(0.05)
     bar.progress(100, 'Done!')
+    st.subheader('選擇總統最重要的因素')
     st.pyplot(fig_presidential)
+    st.subheader('選擇政黨最重要的因素')
     st.pyplot(fig_party_vote)
+    st.subheader('選擇區域立委最重要的因素')
     st.pyplot(fig_regional_legislator)
 
 option_3 = st.selectbox("",
