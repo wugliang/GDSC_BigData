@@ -138,8 +138,8 @@ def personality_test():
 
         img = Image.open(personality_imge[Type])
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype('./msjhbd.ttc', 50)
-        draw.text((10, 10), st.session_state['name'], font=font, fill=(0, 0, 0))
+        font = ImageFont.truetype('./msjhbd.ttc', 150)
+        draw.text((10, 10),' '+ st.session_state['name'], font=font, fill=(0, 0, 0))
         return img
    
     st.title("選民的奇妙冒險：找出你的政治替身")
