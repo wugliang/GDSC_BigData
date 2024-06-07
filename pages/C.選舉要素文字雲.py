@@ -4,6 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from sklearn.preprocessing import StandardScaler
+st.set_page_config(page_title="政知道了",page_icon=":bar_chart:")
 features = ['us_relation_opinion', 'china_relation_opinion',
             'international_alignment_opinion', 'china_democracy_destruction_opinion',
             'taiwan_improvement_opinion', 'taiwan_political_fighting_opinion',
