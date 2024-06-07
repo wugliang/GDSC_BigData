@@ -9,7 +9,7 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 import requests
 from io import BytesIO
-
+st.set_page_config(page_title="政知道了",page_icon=":bar_chart:")
 def calculate_mbti_type(scores):
     mbti_type = ""
     score_1 = 0
