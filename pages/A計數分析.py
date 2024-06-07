@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from sklearn.preprocessing import StandardScaler
-
+st.set_page_config(page_title="政知道了",page_icon=":bar_chart:")
 choose_dic={
     '性別':'gender','學院':'college','年級':'grade','年齡':'age',
     '戶籍地':'residence','在意身邊的朋友親中嗎?':'friend_pro_china','在意伴侶親中嗎?':'marriage_pro_china',
