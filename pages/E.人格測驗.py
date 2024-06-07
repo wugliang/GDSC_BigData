@@ -182,7 +182,7 @@ def personality_test():
         
         for i, option in enumerate(questions_info[index]["options"], start=1):
             weight = 1 if st.session_state.get("selected_option") == i else 0.5
-            if st.button(option, type="secondary", key=i, help=str(weight), use_container_width=True):
+            if st.button(option, type="secondary", key=i, help="", use_container_width=True):
                 st.session_state['selected_option'] = i
                 selected_index = i - 1
                 selected_option = questions_info[index]["options"][selected_index]
