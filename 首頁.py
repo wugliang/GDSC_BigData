@@ -9,6 +9,7 @@ st.title('政知道了')
 st.header('成大學生政治分析器')
 url = "https://www.facebook.com/gdscncku"
 st.write(f"[Designed and developed by GDSC BigData 2024]({url})")
+st.write(f"[網頁架設&維護:吳俊良]")
 st.write('數據僅供參考')
 dataset = pd.read_csv('datas.csv')
 st.subheader('樣本總數')
